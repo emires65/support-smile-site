@@ -3,22 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>support-smile-site</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+    <title>Customer Support | Multi‑Currency Banking</title>
+    <meta name="description" content="Get fast, friendly customer service 24/7. Chat live, email support, and browse step‑by‑step guides." />
+    <link rel="canonical" href="/" />
 
-    <meta property="og:title" content="support-smile-site" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Customer Support | Multi‑Currency Banking" />
+    <meta property="og:description" content="Fast, friendly customer service 24/7 with live chat and email." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <!-- Structured Data: Organization + AggregateRating -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Customer Support Center",
+        "url": "/",
+        "logo": "/favicon.ico",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "ratingCount": "128"
+        }
+      }
+    </script>
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How can I contact support?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Click Contact Us to start a live chat or email support@example.com."}
+          },
+          {
+            "@type": "Question",
+            "name": "What are your support hours?",
+            "acceptedAnswer": {"@type": "Answer", "text": "We provide 24/7 customer service with average response times in minutes."}
+          },
+          {
+            "@type": "Question",
+            "name": "Do you support multiple currencies?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Yes, we support 50+ currencies for global banking needs."}
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- JivoChat widget -->
+    <script src="//code.jivosite.com/widget/hXELMzpYVN" async></script>
   </body>
 </html>

@@ -103,3 +103,49 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Extended design tokens and utilities */
+@layer base {
+  :root {
+    --brand: 215 90% 55%;
+    --brand-2: 190 85% 45%;
+    --brand-contrast: 0 0% 100%;
+    --gradient-primary: linear-gradient(135deg, hsl(var(--brand)) 0%, hsl(var(--brand-2)) 100%);
+    --shadow-elegant: 0 14px 30px -10px hsl(var(--brand) / 0.30);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .dark {
+    --brand: 217 91% 60%;
+    --brand-2: 190 90% 50%;
+    --brand-contrast: 0 0% 100%;
+    --shadow-elegant: 0 14px 36px -12px hsl(var(--brand) / 0.35);
+  }
+}
+
+@layer utilities {
+  .bg-hero {
+    background:
+      radial-gradient(1200px 600px at 50% -10%, hsl(var(--brand) / 0.15), transparent),
+      linear-gradient(180deg, hsl(var(--background)), hsl(var(--background)));
+  }
+  .btn-hero {
+    background-image: var(--gradient-primary);
+    color: hsl(var(--brand-contrast));
+    box-shadow: var(--shadow-elegant);
+    transition: var(--transition-smooth);
+  }
+  .btn-hero:hover { filter: saturate(1.1); transform: translateY(-1px); }
+  .btn-hero:active { transform: translateY(0); }
+
+  .badge-pill {
+    @apply inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium;
+    background-color: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .card-elevated { @apply bg-card border rounded-xl; box-shadow: var(--shadow-elegant); transition: var(--transition-smooth); }
+  .card-elevated:hover { transform: translateY(-2px); }
+
+  .card-soft { @apply bg-card border rounded-xl; }
+}
